@@ -43,10 +43,6 @@ The implementation is a deterministic, rule-based scheduler. It does not call an
 
 The notebook generates the experiment inputs and results as CSV files under `shared_experiment_inputs/`. Run all cells from the beginning in order so that every dataset and function is defined before it is used.
 
-## M4 live demonstration (5 minutes)
-
-Use the **Experiment 1 — Easy / Static Baseline** section in the full notebook. The dedicated **Live Demo Verification — Easy / Static Baseline** block prints and asserts the end-to-end checks.
-
 Suggested sequence:
 
 1. **0:00–0:40 — Task and setup:** State that this is a rule-based Single-Agent baseline and that the demo uses the Easy / Static environment.
