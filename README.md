@@ -2,7 +2,7 @@
 
 This repository contains the project's Single-Agent (SA) baseline notebook for hospital appointment scheduling. The notebook includes two experiments:
 
-- **Experiment 1 — Easy / Static:** 20 doctors and 100 appointment requests, with an end-to-end verification block for the M4 live demonstration.
+- **Experiment 1 — Easy / Static:** 20 doctors and 100 appointment requests.
 - **Experiment 2 — Complex / Dynamic:** 40 doctors, 3,298 initial appointment requests, and 290 dynamic events covering cancellations, doctor unavailability, new appointment requests, and doctor schedule changes.
 
 The implementation is a deterministic, rule-based scheduler. It does not call an external LLM or API.
@@ -39,19 +39,9 @@ The implementation is a deterministic, rule-based scheduler. It does not call an
    ```bash
    jupyter notebook
    ```
-6. Open `Hospital_Appointment_Scheduling_FULL_PROJECT.ipynb` and choose **Kernel → Restart Kernel and Run All Cells** (menu wording may vary by Jupyter version).
+6. Open `hospital_appointment_scheduling_m4_baseline and choose **Kernel → Restart Kernel and Run All Cells** (menu wording may vary by Jupyter version).
 
 The notebook generates the experiment inputs and results as CSV files under `shared_experiment_inputs/`. Run all cells from the beginning in order so that every dataset and function is defined before it is used.
-
-Suggested sequence:
-
-1. **0:00–0:40 — Task and setup:** State that this is a rule-based Single-Agent baseline and that the demo uses the Easy / Static environment.
-2. **0:40–1:40 — Inputs:** Show the generated doctor, patient, request, and time-slot datasets.
-3. **1:40–3:00 — Scheduler:** Briefly show the scheduling logic and the resulting appointment schedule.
-4. **3:00–4:20 — Validation and metrics:** Show the constraint-validation results and baseline evaluation.
-5. **4:20–5:00 — M4 verification:** Run/show the `Live Demo Verification — Easy / Static Baseline` block and point to the assertion confirming that all 100 requests are accounted for, all 100 are scheduled, and there are zero reported constraint violations.
-
-For a live presentation, have the notebook open and the kernel ready. If starting from a fresh kernel, run the cells in order; do not run the verification block before the earlier cells that create its inputs and schedule.
 
 ## Experiments and exported data
 
@@ -74,8 +64,7 @@ These are baseline outputs, not a claim that the MAS outperforms the baseline. T
 
 ## Repository contents
 
-- `Hospital_Appointment_Scheduling_FULL_PROJECT.ipynb` — the full notebook, including both experiments and the M4 end-to-end verification block.
-- `README.md` — setup, execution, experiment overview, and live-demo instructions.
+- `hospital_appointment_scheduling_m4_baseline — the full notebook, including both experiments.
+- `README.md` — setup, execution, experiment overview.
 - `requirements.txt` — Python package dependencies.
 - `.gitignore` — excludes local environments, notebook checkpoints, and generated outputs.
-- `M4_LIVE_DEMO_GUIDE.md` — a short presentation checklist.
